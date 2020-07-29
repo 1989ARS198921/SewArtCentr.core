@@ -24,7 +24,14 @@ namespace SewArtCentr.Models
                         Year = "1979",
                         Price = 3000
 
-                    }
+                    },
+                     new FashionColl
+                     {
+                         Name = "весенняя",
+                         Year = "1990",
+                         Price = 3000
+
+                     }
                     );
             context.SaveChanges();
 
