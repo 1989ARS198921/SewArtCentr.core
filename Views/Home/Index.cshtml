@@ -1,0 +1,32 @@
+﻿@model IEnumerable<SewArtCentr.Models.FashionColl>
+@{ 
+    //ViewData {"Title"}="Ателье студия";
+    Layout = null;
+}
+
+<!Doctype html>
+<html>
+<head>
+    <title>Ателье студия Светланы Лапиной</title>
+</head>
+<body>
+    <h3>Коллекции</h3>
+    <table>
+        <tr>
+            <td>Название</td>
+            <td>Год</td>
+            <td>Цена</td>
+
+        </tr>
+        @foreach (var FashionColl in Model)
+        {
+            <tr>
+                <td>@FashionColl.Name</td>
+                <td>@FashionColl.Year</td>
+                <td>@FashionColl.Price</td>
+                <td><a href="~/Home/Buy/@FashionColl.Id">Купить</a></td>
+                </tr>
+            }
+        </table>
+    </body>
+        </html>
